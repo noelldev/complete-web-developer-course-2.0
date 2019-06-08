@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style type="text/css">
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+      button {
+          border-radius: 5px;
+          border-style: none;
+      }
+      select {
+          border-radius: 5px;
+    
+          
+      }
+    </style>
+</head>
+<body>
+    <p>How many fingers are you holding up?</p>
+    <p><select id="input">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </p>
+    <p><button id="button">Guess!</button></p>
+    
+    <script type="text/javascript">
+        function doGuess(correctAnswer) {
+            let guess = Math.floor(Math.random() * 6);
+                if (guess == correctAnswer) {
+                    return true;
+                } else {
+                    return false;
+                }
+        }
+
+        document.getElementById("button").onclick = ()=>{
+            let myNumber = document.getElementById("input").value;
+            let gotIt = false;
+            let numberOfGuesses = 1;
+            while(gotIt == false) {
+                if (doGuess(myNumber) == true) {
+                    gotIt = true;
+                    alert("Got it! It was "+myNumber+". It took me "+numberOfGuesses+ " guesses.");
+                } else {
+                    numberOfGuesses++;
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
