@@ -3,16 +3,19 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Reaction Tester</title>
+        <title>Testing jQuery</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
     
     </head>
     <body>
-        <div id="div"></div>
-
-        </div>
+      <script>
+          if(typeof jQuery === 'undefined'){
+              alert('jquery not working');
+          }
+          alert('jquery is running');
+      </script>
         
     </body>
 </html>
