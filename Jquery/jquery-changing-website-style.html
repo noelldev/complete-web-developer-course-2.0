@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Chaging Content</title>
+        <title>Changing Style</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <style type="text/css">
@@ -13,17 +13,29 @@
                 width: 200px;
                 margin: 10px;
             }
+
+            .square {
+                background-color: red;
+                height: 200px;
+                width: 200px;
+                margin: 10px; 
+                float: left;
+            }
         </style>
     
     </head>
     <body>
         <div id="circle"></div>
-        <iframe src="https://www.bbc.co.uk/"></iframe>
+        <div class="square"></div>
+        <div class="square"></div>
 
         <script type="text/javascript">
             $('#circle').click(function(){
-                $('iframe').attr('src', 'https://www.freecodecamp.org/');
+                $('#circle').css('background-color', 'red');
+                alert($('#circle').css('background-color'));
             });
-
+            $('.square').click(function(){
+                $(this).css('display', 'none');
+            });
         </script>
     </body>
