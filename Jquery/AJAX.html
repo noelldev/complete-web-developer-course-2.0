@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AJAX</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style type="text/css">
+            #circle {
+                background-color: green;
+                border-radius: 50%;
+                height: 200px;
+                width: 200px;
+                margin: 10px;
+            }
+        </style>
+    
+    </head>
+    <body>
+        <p></p>
+        <script type="text/javascript">
+            $.ajax('https://github.com/n-kode/complete-dev-course-2.0/blob/master/Jquery/Ajax.txt').done(function(data){
+                $('p').html(data);
+            }).fail(function(){
+                alert('could not get data at the moment');
+            });
+        </script>
+
+    </body>
