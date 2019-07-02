@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Regex</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style type="text/css">
+        </style>
+    
+    </head>
+    <body>
+
+        <script type="text/javascript">
+            //will return the regex itself not true or false
+            // let regex = /is/;
+            // let string = 'Regex is great!';
+
+            //will return null because not match with great, small g, case sensitive
+            //let regex = /Great/
+
+            //will return great, case insensitive
+           // let regex = /Great/i;
+            //let string = 'Regex is great!';
+
+            //will return grEaT, still case insensitive
+            // let regex = /Great/i;
+            // let string = 'Regex is grEaT!'
+
+            //return e
+            //let regex = /e/i;
+            //let string = 'Regex is great!'
+
+            //will return e,e,e all match
+            let regex = /e/g;
+            let string = 'Regex is great!'            
+            let result = string.match(regex);
+            alert(result);
+        </script>
+
+    </body>
