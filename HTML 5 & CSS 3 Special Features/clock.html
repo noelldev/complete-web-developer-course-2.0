@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HTML 5 & CSS 3</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+</head>
+
+<body>
+  <canvas id="clock" width="500" height="500">Please upgrade your browser</canvas>
+
+  <script>
+    var canvas = document.getElementById('clock');
+    var context = canvas.getContext('2d');
+    var clockRadius = canvas.width / 2;
+
+    context.beginPath();
+    context.arc(clockRadius, clockRadius, clockRadius, 0, 2 * Math.PI);
+    context.fill()
+
+    context.font = clockRadius / 10 + 'px arial';
+  </script>
+</body>
+
+</html>
