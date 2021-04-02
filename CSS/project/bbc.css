@@ -54,6 +54,22 @@ body {
 #arrow-image {
     position: relative;
     top: -3px;
-    left: 30px
-
+    left: 30px;
+    margin-right: 20px;
 }
+
+ #search-box {
+    width: 150px;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px;
+    margin: 7px 0 7px 15px;
+    float: left;
+ }
+
+ #magnifying-glass {
+    height: 26px;
+    margin-top: 7px;
+ }
