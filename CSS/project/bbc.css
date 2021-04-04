@@ -73,3 +73,7 @@ body {
     height: 26px;
     margin-top: 7px;
  }
+
+ #clear {
+     clear: both;
+ }
